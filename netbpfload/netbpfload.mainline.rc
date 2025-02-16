@@ -4,5 +4,4 @@ service bpfloader /apex/com.android.tethering/bin/netbpfload
     user root
     rlimit memlock 1073741824 1073741824
     oneshot
-    reboot_on_failure reboot,bpfloader-failed
     override
