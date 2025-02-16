@@ -374,7 +374,7 @@ int main(int argc, char** argv, char * const envp[]) {
     // This is because this is primarily meant for triggering genfscon rules,
     // and as such this will likely always be the case.
     // Thus we need to manually create the /sys/fs/bpf/loader subdirectory.
-    if (createSysFsBpfSubDir("loader")) return 1;
+    if (createSysFsBpfSubDir("loader")) failed = true;
 
     // Load all ELF objects, create programs and maps, and pin them
     for (const auto& location : locations) {
